@@ -1,6 +1,0 @@
-/vendor/
-/.vscode/
-.env
-Dockerfile
-docker-compose.yml
-/tests/
