@@ -1,6 +1,6 @@
-/vendor/
-/.vscode/
+vendor/
+.vscode/
 .env
 Dockerfile
 docker-compose.yml
-/tests/
+tests/
