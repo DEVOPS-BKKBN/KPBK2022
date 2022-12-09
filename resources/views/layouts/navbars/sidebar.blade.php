@@ -116,10 +116,10 @@
                                     <a href="{{ route('kabkota') }}" class="nav-link">{{ __('Data Kebupaten/Kota') }}</a>
                                 </li>
                                 <li class="nav-item {{ $elementName == 'kategori' ? 'active' : '' }}">
-                                    <a href="{{ route('page.index', 'kategori') }}" class="nav-link">{{ __('Data Kategori') }}</a>
+                                    <a href="{{ route('page.index', 'kategori') }}" class="nav-link">{{ __('Jenis Kebijakan') }}</a>
                                 </li>
                                 <li class="nav-item {{ $elementName == 'kebijakan' ? 'active' : '' }}">
-                                    <a href="{{ route('page.index', 'kebijakan') }}" class="nav-link">{{ __('Data Kebijakan') }}</a>
+                                    <a href="{{ route('page.index', 'kebijakan') }}" class="nav-link">{{ __('Bidang Kebijakan') }}</a>
                                 </li>
                             </ul>
                         </div>
@@ -137,10 +137,10 @@
                         <div class="collapse {{ $parentSection == 'laporan' ? 'show' : '' }}" id="navbar-laporan">
                             <ul class="nav nav-sm flex-column">
                                 <li class="nav-item {{ $elementName == 'viewkebijakan' ? 'active' : '' }}">
-                                    <a href="{{ route('page.index', 'viewkebijakan') }}" class="nav-link">{{ __('Data Kebijakan') }}</a>
+                                    <a href="{{ route('page.index', 'viewkebijakan') }}" class="nav-link">{{ __('Data by Bidang kebijakan') }}</a>
                                 </li>
                                 <li class="nav-item {{ $elementName == 'viewKategori' ? 'active' : '' }}">
-                                    <a href="{{ route('page.index', 'viewKategori') }}" class="nav-link">{{ __('Data by Kategori') }}</a>
+                                    <a href="{{ route('page.index', 'viewKategori') }}" class="nav-link">{{ __('Data by Jenis Kebijakan') }}</a>
                                 </li>
                                 <li class="nav-item {{ $elementName == 'result' ? 'active' : '' }}">
                                     <a href="{{ route('page.index', 'result') }}" class="nav-link">{{ __('Data Result') }}</a>

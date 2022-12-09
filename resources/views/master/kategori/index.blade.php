@@ -1,7 +1,7 @@
 @extends('layouts.app', [
     'title' => __('Role Management'),
     'parentSection' => 'master',
-    'elementName' => 'provinsi'
+    'elementName' => 'Jenis Kebijakan'
 ])
 
 @section('content')
@@ -11,7 +11,7 @@
                 {{ __('Examples') }} 
             @endslot
 
-            <li class="breadcrumb-item"><a href="{{ route('role.index') }}">{{ __('Master Kategori') }}</a></li>
+            <li class="breadcrumb-item"><a href="{{ route('kebijakan.index') }}">{{ __('Master Jenis Kebijakan') }}</a></li>
             <li class="breadcrumb-item active" aria-current="page">{{ __('List') }}</li>
         @endcomponent
     @endcomponent
@@ -23,14 +23,14 @@
                     <div class="card-header">
                         <div class="row align-items-center">
                             <div class="col-8">
-                                <h3 class="mb-0">{{ __('Kategori') }}</h3>
+                                <h3 class="mb-0">{{ __('Jenis Kebijakan') }}</h3>
                                 <p class="text-sm mb-0">
-                                    {{ __('This is an example of role management. This is a minimal setup in order to get started fast.') }}
+                                    {{ __('This is an example of add transaction. This is a minimal setup in order to get started fast.') }}
                                 </p>
                             </div>
                             @can('create', App\Role::class)
                                 <div class="col-4 text-right">
-                                    <a href="{{ route('role.create') }}" class="btn btn-sm btn-primary">{{ __('Add Kategori') }}</a>
+                                    <a href="{{ route('kategori.create') }}" class="btn btn-sm btn-primary">{{ __('Add jenis kebijakan') }}</a>
                                 </div>
                             @endcan
                         </div>

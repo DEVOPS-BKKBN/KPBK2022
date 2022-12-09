@@ -1,5 +1,5 @@
 @extends('layouts.app', [
-    'title' => __('Role Management'),
+    'title' => __('Provinsi Management'),
     'parentSection' => 'master',
     'elementName' => 'provinsi'
 ])
@@ -8,10 +8,10 @@
     @component('layouts.headers.auth') 
         @component('layouts.headers.breadcrumbs')
             @slot('title') 
-                {{ __('Examples') }} 
+                {{ __('Provinsi') }} 
             @endslot
 
-            <li class="breadcrumb-item"><a href="{{ route('role.index') }}">{{ __('Master Provinsi') }}</a></li>
+            <li class="breadcrumb-item"><a href="{{ route('provinces') }}">{{ __('Master Provinsi') }}</a></li>
             <li class="breadcrumb-item active" aria-current="page">{{ __('List') }}</li>
         @endcomponent
     @endcomponent
@@ -23,16 +23,12 @@
                     <div class="card-header">
                         <div class="row align-items-center">
                             <div class="col-8">
-                                <h3 class="mb-0">{{ __('Roles') }}</h3>
+                                <h3 class="mb-0">{{ __('Provinsi') }}</h3>
                                 <p class="text-sm mb-0">
-                                    {{ __('This is an example of role management. This is a minimal setup in order to get started fast.') }}
+                                    {{ __('This is an example of Provinsi management. This is a minimal setup in order to get started fast.') }}
                                 </p>
                             </div>
-                            @can('create', App\Role::class)
-                                <div class="col-4 text-right">
-                                    <a href="{{ route('role.create') }}" class="btn btn-sm btn-primary">{{ __('Add role') }}</a>
-                                </div>
-                            @endcan
+                            
                         </div>
                     </div>
                     

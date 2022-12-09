@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use App\User;
 use App\Kategori;
 use App\Http\Requests\KategoriRequest;
+use Illuminate\Http\Request;
 
 class KategoriController extends Controller
 {
@@ -33,7 +34,7 @@ class KategoriController extends Controller
      */
     public function create()
     {
-        //
+        return view('master.kategori.create');
     }
 
     /**
@@ -42,9 +43,11 @@ class KategoriController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(KategoriRequest $request, Kategori $model)
     {
-        //
+        //dd($request);
+        $model->create($request->all());
+        return redirect()->route('kategori.create')->withStatus(__('Jenis kebijakan successfully created.'));
     }
 
     /**

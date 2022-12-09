@@ -8,10 +8,10 @@
     @component('layouts.headers.auth') 
         @component('layouts.headers.breadcrumbs')
             @slot('title') 
-                {{ __('Examples') }} 
+                {{ __('Bidang kebijakan') }} 
             @endslot
 
-            <li class="breadcrumb-item"><a href="{{ route('role.index') }}">{{ __('Master Kebijakan') }}</a></li>
+            <li class="breadcrumb-item"><a href="{{ route('kebijakan.index') }}">{{ __('Master Bidang Kebijakan') }}</a></li>
             <li class="breadcrumb-item active" aria-current="page">{{ __('List') }}</li>
         @endcomponent
     @endcomponent
@@ -25,12 +25,12 @@
                             <div class="col-8">
                                 <h3 class="mb-0">{{ __('kebijakan') }}</h3>
                                 <p class="text-sm mb-0">
-                                    {{ __('This is an example of role management. This is a minimal setup in order to get started fast.') }}
+                                    {{ __('This is an example of bidang kebijakan management. This is a minimal setup in order to get started fast.') }}
                                 </p>
                             </div>
                             @can('create', App\Role::class)
                                 <div class="col-4 text-right">
-                                    <a href="{{ route('role.create') }}" class="btn btn-sm btn-primary">{{ __('Add kebijakan') }}</a>
+                                    <a href="{{ route('kebijakan.create') }}" class="btn btn-sm btn-primary">{{ __('Add kebijakan') }}</a>
                                 </div>
                             @endcan
                         </div>
