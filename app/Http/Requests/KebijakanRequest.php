@@ -25,6 +25,13 @@ class KebijakanRequest extends FormRequest
      */
     public function rules()
     {
-        
+        return [
+            'name' => [
+                'required', 'min:3', Rule::unique((new Kebijakan)->getTable())->ignore($this->route()->kebijakan->id ?? null)
+            ],
+            'description' => [
+                'nullable', 'min:5'
+            ]
+        ];
     }
 }

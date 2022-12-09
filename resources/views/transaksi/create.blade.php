@@ -66,7 +66,7 @@
                                     <label class="form-control-label" for="input-role">{{ __('Provinsi') }}</label>
 
                                    
-                                    <select class="form-control" name="id_prov" id="provinsi" data-toggle="select" data-live-search="true" data-live-search-placeholder="Search ..." required>
+                                    <select class="form-control" name="id_prov" id="provinsi" data-toggle="select" data-live-search="true" data-live-search-placeholder="Search ...">
                                     @if(auth()->user()->role_id == 1)
                                         @php
                                         $provinces = \Indonesia::allProvinces();
@@ -92,7 +92,7 @@
                                 <div class="form-group{{ $errors->has('kota') ? ' has-danger' : '' }}" id="kab_div"style="display:none;">
                                     <label class="form-control-label" for="input-role">{{ __('Kota') }}</label>
                                    
-                                    <select class="form-control" name="id_kab" id="kota" data-toggle="select" data-live-search="true" data-live-search-placeholder="Search ..." required>
+                                    <select class="form-control" name="id_kab" id="kota" data-toggle="select" data-live-search="true" data-live-search-placeholder="Search ...">
                                         <option>-</option>
                                            
                                     </select>

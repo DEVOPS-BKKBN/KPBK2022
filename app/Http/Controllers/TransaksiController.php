@@ -63,7 +63,7 @@ class TransaksiController extends Controller
     public function store(TransaksiRequest $request, Transaksi $model)
     {
         //$file = $request->file('file')->getClientOriginalName();
-        //dd($request);
+        dd($request);
        
         $transaksi = $model->create($request->merge([
             'file' => $request->dokumen->store('files', 'public')

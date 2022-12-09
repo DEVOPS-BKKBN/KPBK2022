@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use App\User;
 use App\Kebijakan;
 use App\Http\Requests\KebijakanRequest;
+use Illuminate\Http\Request;
 
 class KebijakanController extends Controller
 {
@@ -31,7 +32,7 @@ class KebijakanController extends Controller
      */
     public function create()
     {
-        //
+        return view('master.kebijakan.create');
     }
 
     /**
@@ -40,9 +41,10 @@ class KebijakanController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(KebijakanRequest $request, Kebijakan $model)
     {
-        //
+        $model->create($request->all());
+        return redirect()->route('kebijakan.create')->withStatus(__('Jenis kebijakan successfully created.'));
     }
 
     /**
